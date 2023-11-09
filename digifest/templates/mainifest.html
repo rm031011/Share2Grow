@@ -1,0 +1,41 @@
+    {% extends "base.html" %}
+
+    {% block content %}
+
+
+
+		<div class="jumbotron" align="center"><h1>Leader Page</h1></div>
+		<!--<div class="form-group" style="padding-top: 50px;" align="center">
+  			<label for="seld" ><strong><h5>Select District:</h5></strong></label>
+  			<select class="form-control" id="seld">
+    			<option>1</option>
+    			<option>2</option>
+    			<option>3</option>
+    			<option>4</option>
+  			</select>
+		</div>-->
+
+    <form action='/resu/' method="POST">
+		{% csrf_token %}
+		<div class="form-group" align="center">
+	  		<label for="selas"><strong><h5>Select Assembly Constituency:</h5></strong></label>
+	  		<select class="form-control" id="selas" name="retcon">
+	  			{% for k in const2 %}
+	  				hi
+	    			<option value="{{k}}"> {{k}}</option>
+	    		{% endfor %}
+	    		
+	  		</select>
+		</div>
+
+		<div align="center">
+				<button class="btn btn-success btn-lg" type="submit">Check</button>
+		</div>
+  </form>
+
+		
+	</div>
+
+
+  {% endblock content %}
+

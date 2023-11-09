@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+  $(document).ready(function(){
+  $("#b1").click(function(){
+  $.ajax({
+    method: "GET",
+    url: "views.py/hi()",
+    data: {"place" : value},
+    dataType: "text",
+    success: function(result){
+      var data=JSON.parse(result);
+      console.log(result);
+    }
+  });
+});
+
+	</script>
+
+</head>
+<body>
+
+	<input type="button" name="sub" id="b1" value="1">
+
+</body>
+</html>

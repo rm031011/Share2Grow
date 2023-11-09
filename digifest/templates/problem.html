@@ -1,0 +1,31 @@
+	{% extends "base.html" %}
+
+
+	{% block content %}
+	<div class="wxyz">
+	<div class="wrap">
+		<h2>Sign Up Here</h2>
+	
+<form action="register_user/" method="POST">
+
+{% csrf_token %}
+
+	<input type="text" placeholder="First Name" required name="fname" class="hi">
+	<input type="text" placeholder="Last Name" required name="lname" class="hi">
+	<input type="text" placeholder="Username" required name="uname" class="hi">
+	<input type="email" placeholder="Email" required name="email" class="hi">
+	<input type="password" placeholder="Password" id="p" required name="pass" class="hi">
+	<input type="password" placeholder="Confirm password" id="cp" required name="cpass" class="hi">
+	<strong><span id="check"></span></strong>
+	<br>
+	<br>
+	<center>
+	<button type="submit" class="btn btn-warning" >SIGNUP</button>
+</center>
+</form>
+</div>
+</div>
+{% endblock %}
+
+<!--</body>
+</html>-->

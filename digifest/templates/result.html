@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+	{% load static %}
+	
+	{% block content %}
+	<br>
+		<center><h3>The Overall Reviews/Problems of The Citizens are:</h3></center>
+
+		
+		{% for i in review %}
+			<ul>
+
+				<li>{{i}}</li>
+				
+			</ul>
+		{% endfor %}
+
+
+
+		<center><h3>The Positive reviews of the Citizens are:</h3></center>
+
+		{% for i in pos %}
+
+			
+			<ul>
+				<li>{{i}}</li>
+			
+			</ul>
+			
+
+		{% endfor %}
+
+
+		<center><h3>The Problems Citizens facing are:</h3></center>
+
+		{% for i in neg %}
+			<ul>
+				<li>{{i}}</li>
+				
+			</ul>
+			
+
+		{% endfor %}
+
+		<center>
+			<h4>Postive Wordcloud</h4>
+			<img src="{% static 'img/pos_plot.jpg' %}">
+
+		</center>
+
+		<center>
+			<h4>Negative Wordcloud</h4>
+			<img src="{% static 'img/neg_plot.jpg' %}">
+
+		</center>
+
+		
+{% endblock content %}

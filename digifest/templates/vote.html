@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+	
+	
+	{% block content %}
+
+		<div class="jumbotron" align="center" style="background-color: white;">
+			<h1>Give your Problems<img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/worried-face.png" style="width: 5%;height: 5%;"> or Valuable Reviews <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_large.png?v=1542446801 " style="width: 5%;height: 5%;"> Here</h1>
+		</div>
+		<form action="/insert/" class="hi" method="POST">
+			{% csrf_token %}
+			<!--<div class="form-group" align="center">
+				<label for="aadhar"><h4>Give your Problems or Valuable Reviews Here</h4></label>
+				<input id="aadhar" type="text" class="form-control" name="voter">
+			</div>-->
+
+			<!--<h3 align="center">OR</h3>
+			<div class="form-group" align="center">
+				<label for="contact"><h4>CONTACT NO.</h4></label>
+				<input id="contct" type="text" class="form-control">
+			</div>-->
+
+			<div class="form-group" align="center">
+				
+				<div class="form-group" style="padding-top: 50px;" align="center">
+  				<label for="syc"><font color="black"><h4><strong>Select your Constituency</strong></h4></font></label>
+  				<select class="form-control" id="syc" name="selconst">
+  					{% for i in con1 %}
+
+	    				<option value="{{i}}" >{{i}}</option>
+	    			{% endfor %}
+  				</select>
+				</div>
+				
+			
+			</div>
+
+			<div class="form-group" align="center">
+				
+				<div class="form-group" style="padding-top: 50px;" align="center">
+  				<label for="syc"><font color="black"><h4><strong>Your Problem  <img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/worried-face.png" style="width: 6%;height: 6%;"> or Review<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_large.png?v=1542446801 " style="width: 5%;height: 5%;"></strong> </h4></font></label>
+  				<div class="input-group">
+  					<!--<div class="input-group-prepend">
+    					<span class="input-group-text">With textarea</span>
+  					</div>-->
+  				<textarea class="form-control" aria-label="With textarea" cols="8" rows="5" name="yp" required></textarea>
+				</div>
+				</div>
+				
+			
+			</div>
+
+
+			<!--<h5><center>OR</center></h5>
+
+			<div class="form-group" align="center">
+				
+				<div class="form-group" style="padding-top: 50px;" align="center">
+  				<label for="syc"><h4><strong>Your Review<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_large.png?v=1542446801 " style="width: 5%;height: 5%;"></strong></h4></label>
+  				<div class="input-group">
+  					<div class="input-group-prepend">
+    					<span class="input-group-text">With textarea</span>
+  					</div>
+  				<textarea class="form-control" aria-label="With textarea" cols="8" rows="5" name="yr"></textarea>
+				</div>
+				</div>-->
+				
+			
+			</div>
+
+
+
+			<div align="center">
+				<button class="btn btn-success btn-lg">SUBMIT!!</button>
+			</div>
+
+			
+		</form>
+
+	{% endblock content %}	
+	
